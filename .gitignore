@@ -1,0 +1,128 @@
+# LinkedIn DM Analyzer - Privacy Protection
+# This .gitignore ensures no personal data gets uploaded to git
+
+# === DATA FILES (CRITICAL - NEVER COMMIT) ===
+# All CSV files in data directory contain personal information
+data/*.csv
+data/messages*.csv
+data/export*.csv
+data/linkedin*.csv
+
+# Any personal data files
+*_personal.*
+*_real.*
+*_actual.*
+
+# === OUTPUT FILES (CONTAIN ANALYZED PERSONAL DATA) ===
+# All generated reports contain real names and messages
+outputs/
+outputs/*.md
+outputs/*.xlsx
+outputs/*.csv
+reports/
+results/
+
+# === PYTHON ENVIRONMENT ===
+# Virtual environment
+venv/
+env/
+.env
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# === SYSTEM FILES ===
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.tmp
+*.temp
+desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# === DEVELOPMENT ===
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+log/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# === JUPYTER NOTEBOOKS WITH DATA ===
+# Jupyter notebooks might contain personal data
+notebooks/*.ipynb
+*.ipynb_checkpoints
+
+# === SENSITIVE CONFIGURATION ===
+# Any config files that might contain API keys or personal info
+config.json
+secrets.json
+.secrets
+credentials.json
+
+# === BACKUP FILES ===
+# Backup files that might contain personal data
+*.bak
+*.backup
+backup/
+backups/
+
+# === ARCHIVES ===
+# Compressed files that might contain personal data
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# === SAMPLE DATA EXCEPTIONS ===
+# Allow sample/demo data (these should be anonymized)
+!data/sample_*.csv
+!data/demo_*.csv
+!data/example_*.csv
+!data/README.md
+!data/.gitkeep
+
+# Allow sample outputs for documentation
+!outputs/sample_*
+!outputs/demo_*
+!outputs/example_*
+!outputs/.gitkeep
